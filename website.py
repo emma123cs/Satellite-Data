@@ -30,8 +30,7 @@ bootstrap = Bootstrap(app)
 
 DATA_FRAME = pd.read_csv("../data/AIS_2018_01_01.csv")
 grouped = DATA_FRAME.groupby("MMSI")
-'''DATA_FRAME2 = grouped.get_group(int(shipMMSI))
-DATA_FRAME2 = DATA_FRAME2.sort_values(by = ["BaseDateTime"])'''
+
 
 def simpleGraph(MMSI):
                 plt.figure()
@@ -148,16 +147,6 @@ def index():
 
 
 
-
-
-
-
-#now we establish the app routes (URL's) that render the html pages 
-#the first app route (the main page) has to be named "/"
-
-
-
-
 @app.route("/hello")
 def hello_world():
     return "<p>Find the analysis of the shiproute below<br><br><a href='/map'>map</a><br><a href='/simpleGraph'>Simple Graph</a><br><a href='/redGraph'>red Graph</a><br><a href='/greenGraph'>greenGraph</a><br><a href='/splineFunction'>splineFunction</a><br><a href='/splineFunction2'>splineFunction2</a></p>"
@@ -168,26 +157,21 @@ def hello_map():
 
 @app.route("/simpleGraph")
 def simpleGraph1():
-    '''MMSI = shipMMSI'''
     return render_template('simpleGraph.html', name = 'simpleGraph', url ="static/images/simpleGraph_" + str(MMSI) + ".png")
 
 @app.route("/greenGraph")
 def greenGraph():
-    '''MMSI = shipMMSI'''
     return render_template('greenGraph.html', name = 'greenGraph', url ="/static/images/greenGraph_"+ str(MMSI) + ".png")
 
 @app.route("/redGraph")
 def redGraph():
-    '''MMSI = shipMMSI'''
     return render_template('redGraph.html', name = 'redGraph', url ="/static/images/redGraph_"+ str(MMSI) + ".png")
 
 @app.route("/splineFunction")
 def Spline():
-    '''MMSI = shipMMSI'''
     return render_template('Spline.html', name = 'Spline', url ='/static/images/Spline.png')
 
 @app.route("/splineFunction2")
 def Spline2():
-    '''MMSI = shipMMSI'''
     return render_template('Spline2.html', name = 'Spline2', url ='/static/images/Spline2.png')
 
