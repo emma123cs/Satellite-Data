@@ -12,18 +12,18 @@ The AIS Data can be downloaded from the [National Oceanic and Atmospheric Admini
 
 Additionally, to run the code, the following imports are necessary:
 
-import os
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import pandas as pd
-import sqlite3
-import seaborn as sns
-import folium
-from scipy.interpolate import CubicSpline
-import datetime
-import geopandas as gpd
-from shapely.geometry import Point
+    import os
+    import pandas as pd
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import pandas as pd
+    import sqlite3
+    import seaborn as sns
+    import folium
+    from scipy.interpolate import CubicSpline
+    import datetime
+    import geopandas as gpd
+    from shapely.geometry import Point
 
 
 
