@@ -9,6 +9,7 @@ Our shared passion for maritime sports and our interest in neural networks have 
 ### Required Databases
 
 The AIS Data can be downloaded from the [National Oceanic and Atmospheric Administration of the US.](https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2018/index.html)
+In order to run the code one has to download the dataset and store it in the DATA folder and run the flask app from website.py in the SRC folder.
 
 Additionally, to run the code, the following imports are necessary:
 
