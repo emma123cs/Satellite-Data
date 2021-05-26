@@ -1,12 +1,12 @@
 # Satellite-Data
 
-## **The Rational behind the Group Project**
+# The Rational behind the Group Project
 
 Our shared passion for maritime sports and our interest in neural networks have led us to create this project. The back-end code was written in Python while the front-end application is enabled through HTML to elevate the level of coding and allow for interactions.
 
 
 
-## **Required Databases**
+## Required Databases
 
 The AIS Data can be downloaded from the [National Oceanic and Atmospheric Administration of the US.](https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2018/index.html)
 
