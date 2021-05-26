@@ -102,20 +102,8 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 (iv)	However, if the MMSI is not in our database, the site will display the error Message “That number is not in our database”. The form is created with the use of WTForms in the forms.py file. 
  
 (v)	When clicking on one of the six options the HTML page is rendered and saved in the templates folder. The HTML pages for the graphs follow a very simple layout:
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>{{ name }}</p>
 
-    <img src={{ url }} alt="Chart" > 
-</body>
-</html>
+![Image of HTML Page](https://imgur.com/a/nFA18Vh)
 
 (vi)	The image URL displays the associated PNG from the images folder that have been created by calling the functions in the first app route to a specific MMSI. 
 
