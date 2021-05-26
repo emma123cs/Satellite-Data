@@ -1,11 +1,11 @@
 # Satellite-Data
-The Rational behind the Group Project
+**The Rational behind the Group Project**
 
 Our shared passion for maritime sports and our interest in neural networks have led us to create this project. The back-end code was written in Python while the front-end application is enabled through HTML to elevate the level of coding and allow for interactions.
 
-Required Databases
+**Required Databases**
 
-The AIS Data can be downloaded from the National Oceanic and Atmospheric Administration of the US.
+The AIS Data can be downloaded from the National Oceanic and Atmospheric Administration of the US. (https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2018/index.html)
 
 Additionally, to run the code, the following imports are necessary:
 
@@ -22,21 +22,21 @@ import datetime
 import geopandas as gpd
 from shapely.geometry import Point
 
-Background Information on AIS Data
+**Background Information on AIS Data**
 
 AIS (Automatic Identification System) tracks vessels across the globe by unique identifier numbers using GPS data. 
 
 AIS data is available via Marine Traffic and allows for display of information about vessels worldwide. The information for each vessel is structured in this way:
 
-	Vessel name, MMSI number and call sign
-	Type of vessel (such as passenger, cargo, fishing) 
-	Vessel’s position (current latitude and longitude) 
-	Course over ground (COG) 
-	Speed over ground (SOG) 
-	Heading from your vessel
-	Closest point of approach (CPA) (distance) 
-	Time to closest point of approach (TCPA) 
-	Vessels’ dimensions (length, beam and draught)
+- Vessel name, MMSI number and call sign
+- Type of vessel (such as passenger, cargo, fishing) 
+- Vessel’s position (current latitude and longitude) 
+- Course over ground (COG) 
+- Speed over ground (SOG) 
+- Heading from your vessel
+- Closest point of approach (CPA) (distance) 
+- Time to closest point of approach (TCPA) 
+- Vessels’ dimensions (length, beam and draught)
 
 
 
@@ -56,7 +56,7 @@ AIS data is available via Marine Traffic and allows for display of information a
 
 
 
-Structure of the Code
+**Structure of the Code**
 
 As previously mentioned, the code is structured into two parts: (1) the back-end code using Python and (2) the front-end, interactive application using HTML.
 
@@ -139,12 +139,12 @@ render_template('map' + str(MMSI) + '.html')
 
 
 
-Future Applications
+**Future Applications**
 
 The idea behind the code is to use satellite imagery like it is done in Remote Sensing to train and test neural networks like the Yolo Algorithm for object detection. In a future application, satellite imagery could be downloaded for the nine identified ports and the ships in our database which entered these ports. This would allow for a precise download. Subsequently, bounding boxes could be drawn around the ships, ideally with the same ships appearing in different images. To ensure the download of the imagery with the most matches between ships and ports in our database, the confusion matrix could be used. The bounding boxes would then be labelled with the help of our database (e.g. MMSI numbers or vessel names) and used for training and testing of the algorithm. 
 
 
-Sources
+**Sources**
 
 https://appsilon.com/object-detection-yolo-algorithm/
 
