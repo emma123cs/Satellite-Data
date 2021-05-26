@@ -139,7 +139,7 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 
 ---------
 [![Whats-App-Image-2021-05-26-at-15-46-59.jpg](https://i.postimg.cc/Vs30f5g4/Whats-App-Image-2021-05-26-at-15-46-59.jpg)](https://postimg.cc/yWy8n1wS)
-##### _The error message in case string is written instead of integers
+##### _The error message in case the user writes string instead of integers
 ---------
 
 (v)	When clicking on one of the six options the HTML page is rendered and saved in the templates folder. The HTML pages for the graphs follow a very simple layout:
