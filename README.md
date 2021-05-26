@@ -114,7 +114,7 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 We used Flask as a framework to create a simple website. The code of the Flask app can be found in the file “website.py”. 
 
-(i)	The index.html file is the first HTML page that the user sees and is rendered by the app route (“/”) that is called instantly by running the code.  We used the HTML layout … which is linked in the sources down below. By starting the code also, the function for the Polygon-Map is called. 
+(i)	The index.html file is the first HTML page that the user sees and is rendered by the app route (“/”) that is called instantly by running the code.  We used the simple HTML layout from John Sobanski which is linked in the sources down below. By starting the code also, the function for the Polygon-Map is called. 
 
 (ii) The user has two options on what to do next. A) they can check out the data-analysis for a specific MMSI number or B) they can learn about maritime traffic in general. 
 
