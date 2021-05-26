@@ -1,6 +1,6 @@
 # Satellite-Data
 
-# The Rational behind the Group Project
+### The Rational behind the Group Project
 
 Our shared passion for maritime sports and our interest in neural networks have led us to create this project. The back-end code was written in Python while the front-end application is enabled through HTML to elevate the level of coding and allow for interactions.
 
