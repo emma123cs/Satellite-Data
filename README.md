@@ -68,7 +68,7 @@ AIS data is available via Marine Traffic and allows for display of information a
 
 As previously mentioned, the code is structured into two parts: (1) the back-end code using Python and (2) the front-end, interactive application using HTML.
 
-##### (1)	The back-end code in Python:
+#### (1)	The back-end code in Python:
 
 (i)	We first create a data frame with the AIS Data for January 1st, 2018 (randomly selected day to serve as an example, any other day could also be used instead). To get a feeling for  the unique MMSIs in the AIS data, we also print them using df1.MMSI.unique(). This helps us to group the data for one illustrative MMSI in the AIS data and show the route on a map. 
 
@@ -87,7 +87,7 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 
 
-##### (2)	The front-end code:
+#### (2)	The front-end code:
 
 We used Flask as a framework to create a simple website. The code of the Flask app can be found in the file “website.py”. 
 
