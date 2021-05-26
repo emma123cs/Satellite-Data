@@ -163,9 +163,9 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 
     render_template('map' + str(MMSI) + '.html')
 
-(viii) If the user decides they want to learn about maritime data in general, they can click on "Polygon Coordinates" on the index.html.  
+(viii) If the user decides they want to learn about maritime data in general, they can click on "Polygon Coordinates" on the index.html. It will show him the coordinates of a few ports in the United States as examples. *HIER BILD*
 
-(ix) The PortsCoordinates.png is created by running the portsCooridnates.py file. Because it doesn’t change by running the code and slowed down our side severely,  we excluded the file. However, if one would want to see different data from another day, they would need to rerun the portsCooridnates.py to create a new PNG. In order to do so, one would need to include the file into the website.py file and create a function and call it after the polymap() function.
+(ix) The PortsCoordinates.png is created by running the portsCooridnates.py file. Because it doesn’t change by running the code and slowed down our side severely,  we excluded the file from the website code. However, we can reload it every time by deleting the '#' infront of the 'US-ports()' function in website.py and call it.
 
 (x)	The user can then choose to display the Polygon Map (which is explained above).
 
