@@ -87,7 +87,7 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 
 
-#### (2)	The front-end code:
+#### (2)	The front-end code with HTML:
 
 We used Flask as a framework to create a simple website. The code of the Flask app can be found in the file “website.py”. 
 
