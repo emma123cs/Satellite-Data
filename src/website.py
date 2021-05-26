@@ -26,23 +26,24 @@ import dataframe_image as dfi
 #we create an instance of the Flask class
 app = Flask(__name__)
 
+#the secret key is chosen randomly
 app.config['SECRET_KEY']= 'Pxce1hxcfx9cxaax97xb7xedYx9b'
 
 bootstrap = Bootstrap(app)
 
-
+#we then create a dataframe with Pandas and sort it by MMSI no.
 DATA_FRAME = pd.read_csv("../data/AIS_2018_01_01.csv")
 grouped = DATA_FRAME.groupby("MMSI")
 
 
-#on the index page we give the user the option to view general stuff about the shiproutes on 1/1/2018
-#therefore we first create and call the functions for the different buttons that are not specifically connected to the MMSI number of a single ship
+#by running the code the user first sees the index page
+#we created function (functions if you choose to include the function from portsCoordinates.py) for the different buttons that are not specifically connected to the MMSI number of a single ship
 
 
 def polymap():
   ports_coordinates = gpd.read_file("../data/ports_us.geojson")
 
-  #print(ports_coordinates.crs)
+  
   DATA_FRAME = ports_coordinates.to_crs(epsg=4326)
 
   map_of_ports = folium.Map(location=[37.09, -95.71], zoom_start=4)
@@ -54,14 +55,16 @@ def polymap():
       folium.Popup(r['location']).add_to(geo_j)
       geo_j.add_to(map_of_ports)
 
+    #instead of printing, we save the map as an HTML file
   map_of_ports.save("templates/Polymap.html")
 
 
-    
+#we call the function:    
 polymap()
 
 
-# then we create the fuctions that are linked to a specific MMSI number and call them later in the index app route
+#then we create the fuctions that are linked to a specific MMSI number and call them later in the index app route
+#every function below uses the 'savefig' command to create a PNG file except for the folium map which renders an HTML file
 
 def simpleGraph(MMSI):
                 plt.figure()
@@ -84,6 +87,7 @@ def foliumMap(MMSI):
                                     popup="367651830", color="red").add_to(f)
 
     f.add_to(actual_map)
+    #by rerunning the code, a new template is saved 
     actual_map.save("templates/map" + str(MMSI) + ".html")
 
 def scatteredGraphGreen(MMSI):
@@ -148,17 +152,20 @@ def splineTwo(MMSI):
 # below we have all the different app routes that render HTML files that display the PNGs of the graphs 
 @app.route("/", methods = ['GET', 'POST'])
 def index():
+    #we create an array of all unique MMSI numbers in the dataset
     numbers = DATA_FRAME.MMSI.unique()
     message = ""
+    #we imported the form from forms.py with the help of WTForms
     form = MMSI_Number()
-    #message = ""
+    #the logic of the if statement: if the MMSI no is available in our dataset go to next page, else error message.
     if form.validate_on_submit():
         number = form.MMSI_Number.data
         if number in numbers:
-            # empty the form field
             global MMSI
             MMSI = number
+            #empty the form field
             form.MMSI_Number.data = ""
+            #we call the functions with the specific MMSI which leads to the PNGs and the folium map being created
             simpleGraph(MMSI)
             foliumMap(MMSI)
             scatteredGraphGreen(MMSI)
@@ -206,4 +213,4 @@ def poly_map():
 # and the route for the poorts coordinates 
 @app.route("/PortsPolys")
 def poly_ports():
-    return render_template('poly_ports.html', name = 'PolygoneCoordinates', url ='/static/PortsCoordinates.png')
+    return render_template('poly_ports.html', name = 'PolygonCoordinates', url ='/static/PortsCoordinates.png')
