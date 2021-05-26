@@ -166,4 +166,20 @@ https://towardsdatascience.com/creating-sea-routes-from-the-sea-of-ais-data-30bc
 
 https://www.youtube.com/watch?v=BvXMRo78XRA
 
+https://john.soban.ski/pass-bootstrap-html-attributes-to-flask-wtforms.html
 
+https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog/02-Templates/templates
+
+https://www.digitalocean.com/community/tutorials/processing-incoming-request-data-in-flask-de
+
+https://stackoverflow.com/questions/27611216/how-to-pass-a-variable-between-flask-pages
+
+https://pythonhosted.org/Flask-Bootstrap/
+
+https://flask.palletsprojects.com/en/2.0.x/
+
+https://stackoverflow.com/questions/34902378/where-do-i-get-a-secret-key-for-flask
+
+https://betterprogramming.pub/how-to-use-flask-wtforms-faab71d5a034
+
+https://www.oreilly.com/library/view/flask-web-development/9781491991725/ch04.html#:~:text=The%20validate_on_submit()%20method%20of,by%20all%20the%20field%20validators.&text=When%20a%20user%20navigates%20to,validate_on_submit()%20will%20return%20False%20
