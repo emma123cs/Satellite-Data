@@ -70,6 +70,8 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 #### (1)	The back-end code in Python:
 
+**Note:** The back-end code is integrated in the file _website.py_ and _portsCooridnates.py_ and only explained here seperately to provide a more comprehensive description of the code. 
+
 (i)	We first create a data frame with the AIS Data for January 1st, 2018 (randomly selected day to serve as an example, any other day could also be used instead). To get a feeling for  the unique MMSIs in the AIS data, we also print them using df1.MMSI.unique(). This helps us to group the data for one illustrative MMSI in the AIS data and show the route on a map. 
 
 (ii)	To make the route more visual, we can also illustrate it on a world map, using folium.
@@ -80,9 +82,9 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 (v)	In a next step, we have marked the nine largest ports in a geojson file drawing ploygons around the ports. By using geopandas, we can outline the coordinates of the polygons around the ports.
 
-(vi)	 We can now test how many ships from our AIS data frame fall within the port ploygons. To demonstrate that our code can also be used for AIS data from other dates, we use data from January 1st, 2019 this time. For this, we first use a folium map again to display all polygons drawn around the nine ports on a world map.
+(vi)	 We can now test how many ships from our AIS data frame fall within the port ploygons. For this, we first use a folium map again to display all polygons drawn around the nine ports on a world map.
 
-(vii)	Finally, we create a confusion matrix with the ships and ports data and match their coordinates to identify the ports with the most of our ships from the AIS data in it. This allows us to determine the ports in which most of our ships can be localized.
+(vii)	Finally, we create a confusion matrix with the ships´ and ports´ data and match their coordinates to identify the ports with the most of our ships from the AIS data in it. This allows us to determine the ports in which most of our ships can be localized.
 
 
 
