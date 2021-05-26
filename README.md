@@ -163,13 +163,14 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 (vi) The image URL displays the associated PNG from the images folder that have been created by calling the functions in the first app route to a specific MMSI. 
 
 (vii) The user can now go back and forth within the app and type in any MMSI number they would like to see the data analysis to. The HTML pages for the graphs stay in the templates folder and are newly rendered with a new name and URL. Furthermore, the PNGs are also newly created. However, the HTML of the map always creates an additional HTML file with the MMSI number in the name. This leads to a smoother UI, as one had to restart the code to render a new map.
-render_template('map' + str(MMSI) + '.html')
 
-(viii) If the user decides they want to learn about maritime data in general, they can click on Polygon Coordinates on the index.html.  
+    render_template('map' + str(MMSI) + '.html')
+
+(viii) If the user decides they want to learn about maritime data in general, they can click on "Polygon Coordinates" on the index.html.  
 
 (ix) The PortsCoordinates.png is created by running the portsCooridnates.py file. Because it doesn’t change by running the code and slowed down our side severely,  we excluded the file. However, if one would want to see different data from another day, they would need to rerun the portsCooridnates.py to create a new PNG. In order to do so, one would need to include the file into the website.py file and create a function and call it after the polymap() function.
 
-(x)	The user can then choose to display the Polygon Map (which is explained in the Backend section No. vi)
+(x)	The user can then choose to display the Polygon Map (which is explained above).
 
 
 
