@@ -97,13 +97,15 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 
 (ii)	The user has two options on what to do next. A) they can check out the data-analysis for a specific MMSI number or B) they can learn about maritime traffic in general. 
 
+[![Whats-App-Image-2021-05-26-at-15-46-23-copy.jpg](https://i.postimg.cc/D0nbQMN0/Whats-App-Image-2021-05-26-at-15-46-23-copy.jpg)](https://postimg.cc/N9CMBpBv)
+
 (iii)	In our dataset we include the coordinates of 12215 different MMSI. The user can enter one of these MMSI and get to app.route("/hello"), where they will find a menu with 6 options (five graphs and one map). By entering an MMSI number the functions for the different graphs and the folium map are called and create either PNG or, in the case of the map, an HTML file. By clicking on one of the options the associated app route renders an HTML which displays the earlier created PNG or map (v).
+
+[![Whats-App-Image-2021-05-26-at-15-46-23.jpg](https://i.postimg.cc/FFM6vgLR/Whats-App-Image-2021-05-26-at-15-46-23.jpg)](https://postimg.cc/QVqmk7SG)
  
 (iv)	However, if the MMSI is not in our database, the site will display the error Message “That number is not in our database”. The form is created with the use of WTForms in the forms.py file. 
  
 (v)	When clicking on one of the six options the HTML page is rendered and saved in the templates folder. The HTML pages for the graphs follow a very simple layout:
-
-[![Whats-App-Image-2021-05-26-at-15-46-23.jpg](https://i.postimg.cc/FFM6vgLR/Whats-App-Image-2021-05-26-at-15-46-23.jpg)](https://postimg.cc/QVqmk7SG)
 
 (vi)	The image URL displays the associated PNG from the images folder that have been created by calling the functions in the first app route to a specific MMSI. 
 
