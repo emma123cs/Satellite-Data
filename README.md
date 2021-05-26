@@ -12,18 +12,29 @@ The AIS Data can be downloaded from the [National Oceanic and Atmospheric Admini
 
 Additionally, to run the code, the following imports are necessary:
 
+    from flask import Flask, render_template, url_for, redirect
     import os
     import pandas as pd
     import numpy as np
+    import matplotlib
+    matplotlib.use('Agg')
     import matplotlib.pyplot as plt
-    import pandas as pd
-    import sqlite3
-    import seaborn as sns
     import folium
     from scipy.interpolate import CubicSpline
     import datetime
+    import io
+    import random
     import geopandas as gpd
-    from shapely.geometry import Point
+    from flask import Response
+    from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+    from matplotlib.figure import Figure
+    from forms import MMSI_Number #imports the form MMSI_number from the file forms.py
+    from flask_bootstrap import Bootstrap
+    import dataframe_image as dfi #only needed if 'def US_ports():' function in website.py 
+    from flask_wtf import FlaskForm
+    from wtforms import IntegerField
+    from wtforms.validators import DataRequired, Length
+
 
 
 
