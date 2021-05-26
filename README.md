@@ -143,6 +143,7 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 ---------
 
 (v)	When clicking on one of the six options the HTML page is rendered and saved in the templates folder. The HTML pages for the graphs follow a very simple layout:
+    
     <!DOCTYPE html>
     <html lang="en">
     <head>
