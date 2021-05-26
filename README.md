@@ -9,7 +9,7 @@ Our shared passion for maritime sports and our interest in neural networks have 
 ### Required Databases
 
 The AIS Data can be downloaded from the [National Oceanic and Atmospheric Administration of the US.](https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2018/index.html)
-In order to run the code one has to download the dataset and store it in the DATA folder and run the flask app from website.py in the SRC folder.
+In order to run the code one has to download the dataset and store it in the DATA folder and run the flask app from _website.py_ in the SRC folder.
 
 Additionally, to run the code, the following imports are necessary:
 
@@ -44,7 +44,7 @@ Additionally, to run the code, the following imports are necessary:
 
 AIS (Automatic Identification System) tracks vessels across the globe by unique identifier numbers using GPS data. 
 
-AIS data is available via Marine Traffic and allows for display of information about vessels worldwide. The information for each vessel is structured in this way:
+AIS data is available via [Marine Traffic](https://www.marinetraffic.com/en/ais/home/centerx:-12.0/centery:25.0/zoom:2) and allows for display of information about vessels worldwide. The information for each vessel is structured in this way:
 
 - Vessel name, MMSI number and call sign
 - Type of vessel (such as passenger, cargo, fishing) 
@@ -84,7 +84,7 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 **Note:** The back-end code is integrated in the file _website.py_ and _portsCooridnates.py_ and only explained here seperately to provide a more comprehensive description of the code. 
 
-(i)	We first create a data frame with the AIS Data for January 1st, 2018 (randomly selected day to serve as an example, any other day could also be used instead). To get a feeling for  the unique MMSIs in the AIS data, we also print them using df1.MMSI.unique(). This helps us to group the data for one illustrative MMSI in the AIS data and show the route on a map. 
+(i)	We first created a data frame with the AIS Data for January 1st, 2018 (randomly selected day to serve as an example, any other day could also be used instead). To get a feeling for  the unique MMSIs in the AIS data, we also printed them using df1.MMSI.unique(). This helped us to group the data for one illustrative MMSI in the AIS data and show the route on a map. 
 
 (ii) To make the route more visual, we can also illustrate it on a world map, using folium.
 
@@ -97,7 +97,7 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 (iv) With a cubic spline function, we can then interpolate all missing latitude and longitude coordinates.
 
-(v)	In a next step, we have marked the nine largest ports in a geojson file drawing ploygons around the ports. By using geopandas, we can outline the coordinates of the polygons around the ports.
+(v)	In a next step, we have marked the nine largest ports in a geojson file, drawing ploygons around the ports. By using geopandas, we can outline the coordinates of the polygons around the ports.
 
 (vi) We can now test how many ships from our AIS data frame fall within the port ploygons. For this, we first use a folium map again to display all polygons drawn around the nine ports on a world map.
 
@@ -113,7 +113,7 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 #### (2)	The front-end code with HTML:
 
-We used Flask as a framework to create a simple website. The code of the Flask app can be found in the file “website.py”. 
+We used Flask as a framework to create a simple website. The code of the Flask app can be found in the file _website.py_. 
 
 (i)	The index.html file is the first HTML page that the user sees and is rendered by the app route (“/”) that is called instantly by running the code.  We used the simple HTML layout from John Sobanski which is linked in the sources down below. By starting the code also, the function for the Polygon-Map is called. 
 
@@ -124,7 +124,7 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 ##### _Two options for the user to choose from_
 ---------
 
-(iii) In our dataset we include the coordinates of 12215 different MMSI. The user can enter one of these MMSI and get to app.route("/hello"), where they will find a menu with 6 options (five graphs and one map). By entering an MMSI number the functions for the different graphs and the folium map are called and create either PNG or, in the case of the map, an HTML file. By clicking on one of the options the associated app route renders an HTML which displays the earlier created PNG or map (v).
+(iii) In our dataset, we included the coordinates of 12215 different MMSI. The user can enter one of these MMSI and get to app.route("/hello"), where they will find a menu with 6 options (five graphs and one map). By entering an MMSI number the functions for the different graphs and the folium map are called and create either PNG or, in the case of the map, an HTML file. By clicking on one of the options the associated app route renders an HTML which displays the earlier created PNG or map (v).
 
 (iv) However, if the MMSI is not in our database, the site will display the error Message “That number is not in our database”. The form is created with the use of WTForms in the forms.py file. 
 
@@ -139,7 +139,7 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 ##### _The error message in case the user writes string instead of integers_
 ---------
 
-(v)	When clicking on one of the six options the HTML page is rendered and saved in the templates folder. The HTML pages for the graphs follow a very simple layout:
+(v)	When clicking on one of the six options the HTML page is rendered and saved in the templates folder. The HTML pages for the graphs follow a simple layout:
     
     <!DOCTYPE html>
     <html lang="en">
