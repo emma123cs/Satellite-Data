@@ -103,7 +103,7 @@ We used Flask as a framework to create a simple website. The code of the Flask a
  
 (v)	When clicking on one of the six options the HTML page is rendered and saved in the templates folder. The HTML pages for the graphs follow a very simple layout:
 
-![Image of HTML Page](https://imgur.com/a/nFA18Vh)
+[![Whats-App-Image-2021-05-26-at-15-46-23-copy.jpg](https://i.postimg.cc/nLrj0mTK/Whats-App-Image-2021-05-26-at-15-46-23-copy.jpg)](https://postimg.cc/qtfv7zPg)
 
 (vi)	The image URL displays the associated PNG from the images folder that have been created by calling the functions in the first app route to a specific MMSI. 
 
