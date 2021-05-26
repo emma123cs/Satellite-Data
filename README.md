@@ -104,11 +104,12 @@ _Two options for the user to choose from_
 
 [![Whats-App-Image-2021-05-26-at-15-47-22.jpg](https://i.postimg.cc/vHfgcMSy/Whats-App-Image-2021-05-26-at-15-47-22.jpg)](https://postimg.cc/Tp2Ys86N)
 
+
 _The user can search for an MMSI number in the database_
 
 [![Whats-App-Image-2021-05-26-at-15-46-23.jpg](https://i.postimg.cc/FFM6vgLR/Whats-App-Image-2021-05-26-at-15-46-23.jpg)](https://postimg.cc/QVqmk7SG)
 
-_The user is then directed to a page where he gets different information on its ship to choose from _
+_The user is then directed to a page where he gets different information on its ship to choose from_
 
 (iv) However, if the MMSI is not in our database, the site will display the error Message “That number is not in our database”. The form is created with the use of WTForms in the forms.py file. 
 
