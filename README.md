@@ -13,28 +13,18 @@ The AIS Data can be downloaded from the National Oceanic and Atmospheric Adminis
 Additionally, to run the code, the following imports are necessary:
 
 import os
-
 import pandas as pd
-
 import numpy as np
-
 import matplotlib.pyplot as plt
-
 import pandas as pd
-
 import sqlite3
-
 import seaborn as sns
-
 import folium
-
 from scipy.interpolate import CubicSpline
-
 import datetime
-
 import geopandas as gpd
-
 from shapely.geometry import Point
+
 
 
 
@@ -53,6 +43,7 @@ AIS data is available via Marine Traffic and allows for display of information a
 - Closest point of approach (CPA) (distance) 
 - Time to closest point of approach (TCPA) 
 - Vessels’ dimensions (length, beam and draught)
+
 
 
 
@@ -92,6 +83,7 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 (vi)	 We can now test how many ships from our AIS data frame fall within the port ploygons. To demonstrate that our code can also be used for AIS data from other dates, we use data from January 1st, 2019 this time. For this, we first use a folium map again to display all polygons drawn around the nine ports on a world map.
 
 (vii)	Finally, we create a confusion matrix with the ships and ports data and match their coordinates to identify the ports with the most of our ships from the AIS data in it. This allows us to determine the ports in which most of our ships can be localized.
+
 
 
 
@@ -136,9 +128,11 @@ render_template('map' + str(MMSI) + '.html')
 
 
 
+
 **Future Applications**
 
 The idea behind the code is to use satellite imagery like it is done in Remote Sensing to train and test neural networks like the Yolo Algorithm for object detection. In a future application, satellite imagery could be downloaded for the nine identified ports and the ships in our database which entered these ports. This would allow for a precise download. Subsequently, bounding boxes could be drawn around the ships, ideally with the same ships appearing in different images. To ensure the download of the imagery with the most matches between ships and ports in our database, the confusion matrix could be used. The bounding boxes would then be labelled with the help of our database (e.g. MMSI numbers or vessel names) and used for training and testing of the algorithm. 
+
 
 
 
