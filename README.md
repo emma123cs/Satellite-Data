@@ -76,6 +76,11 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 (ii) To make the route more visual, we can also illustrate it on a world map, using folium.
 
+---------
+[![Whats-App-Image-2021-05-26-at-16-49-49.jpg](https://i.postimg.cc/3JKGb1jp/Whats-App-Image-2021-05-26-at-16-49-49.jpg)](https://postimg.cc/qg5gN85M)
+##### _Route of ship with the MMSI 366950020_
+---------
+
 (iii) The previously drawn route can also be split into coordinates for longitude and latitude. When plotting the coordinates in a scatter plot, it becomes clear that some coordinates are missing (can be seen by the dotted lines).
 
 (iv) With a cubic spline function, we can then interpolate all missing latitude and longitude coordinates.
@@ -83,6 +88,11 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 (v)	In a next step, we have marked the nine largest ports in a geojson file drawing ploygons around the ports. By using geopandas, we can outline the coordinates of the polygons around the ports.
 
 (vi) We can now test how many ships from our AIS data frame fall within the port ploygons. For this, we first use a folium map again to display all polygons drawn around the nine ports on a world map.
+
+---------
+[![Whats-App-Image-2021-05-26-at-16-51-38.jpg](https://i.postimg.cc/sX7Wb00P/Whats-App-Image-2021-05-26-at-16-51-38.jpg)](https://postimg.cc/JD7tkK8t)
+##### _One of the polygons around the Port of Newark_
+---------
 
 (vii) Finally, we create a confusion matrix with the ships´ and ports´ data and match their coordinates to identify the ports with the most of our ships from the AIS data in it. This allows us to determine the ports in which most of our ships can be localized.
 
