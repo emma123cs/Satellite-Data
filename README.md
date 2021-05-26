@@ -5,6 +5,7 @@
 Our shared passion for maritime sports and our interest in neural networks have led us to create this project. The back-end code was written in Python while the front-end application is enabled through HTML to elevate the level of coding and allow for interactions.
 
 
+
 **Required Databases**
 
 The AIS Data can be downloaded from the National Oceanic and Atmospheric Administration of the US. (https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2018/index.html)
@@ -12,17 +13,29 @@ The AIS Data can be downloaded from the National Oceanic and Atmospheric Adminis
 Additionally, to run the code, the following imports are necessary:
 
 import os
+
 import pandas as pd
+
 import numpy as np
+
 import matplotlib.pyplot as plt
+
 import pandas as pd
+
 import sqlite3
+
 import seaborn as sns
+
 import folium
+
 from scipy.interpolate import CubicSpline
+
 import datetime
+
 import geopandas as gpd
+
 from shapely.geometry import Point
+
 
 
 **Background Information on AIS Data**
@@ -59,11 +72,12 @@ AIS data is available via Marine Traffic and allows for display of information a
 
 
 
+
 **Structure of the Code**
 
 As previously mentioned, the code is structured into two parts: (1) the back-end code using Python and (2) the front-end, interactive application using HTML.
 
-(1)	The back-end code in Python:
+**(1)	The back-end code in Python:**
 
 (i)	We first create a data frame with the AIS Data for January 1st, 2018 (randomly selected day to serve as an example, any other day could also be used instead). To get a feeling for  the unique MMSIs in the AIS data, we also print them using df1.MMSI.unique(). This helps us to group the data for one illustrative MMSI in the AIS data and show the route on a map. 
 
@@ -81,7 +95,7 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 
 
-(2)	The front-end code:
+**(2)	The front-end code:**
 
 We used Flask as a framework to create a simple website. The code of the Flask app can be found in the file “website.py”. 
 
@@ -121,9 +135,11 @@ render_template('map' + str(MMSI) + '.html')
 (x)	The user can then choose to display the Polygon Map (which is explained in the Backend section No. vi)
 
 
+
 **Future Applications**
 
 The idea behind the code is to use satellite imagery like it is done in Remote Sensing to train and test neural networks like the Yolo Algorithm for object detection. In a future application, satellite imagery could be downloaded for the nine identified ports and the ships in our database which entered these ports. This would allow for a precise download. Subsequently, bounding boxes could be drawn around the ships, ideally with the same ships appearing in different images. To ensure the download of the imagery with the most matches between ships and ports in our database, the confusion matrix could be used. The bounding boxes would then be labelled with the help of our database (e.g. MMSI numbers or vessel names) and used for training and testing of the algorithm. 
+
 
 
 **Sources**
