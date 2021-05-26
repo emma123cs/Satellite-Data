@@ -97,7 +97,7 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 (iv) With a cubic spline function, we can then interpolate all missing latitude and longitude coordinates.
 
-(v)	In a next step, we have marked the nine largest ports in a geojson file, drawing ploygons around the ports. By using geopandas, we can outline the coordinates of the polygons around the ports.
+(v)	In a next step, we have marked the nine largest ports in a geojson file (stored in DATA, _ports_us.geojson_), drawing ploygons around the ports. By using geopandas, we can outline the coordinates of the polygons around the ports.
 
 (vi) We can now test how many ships from our AIS data frame fall within the port ploygons. For this, we first use a folium map again to display all polygons drawn around the nine ports on a world map.
 
