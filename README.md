@@ -101,6 +101,8 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 ##### _Two options for the user to choose from_
 
 
+---------
+
 (iii) In our dataset we include the coordinates of 12215 different MMSI. The user can enter one of these MMSI and get to app.route("/hello"), where they will find a menu with 6 options (five graphs and one map). By entering an MMSI number the functions for the different graphs and the folium map are called and create either PNG or, in the case of the map, an HTML file. By clicking on one of the options the associated app route renders an HTML which displays the earlier created PNG or map (v).
 
 [![Whats-App-Image-2021-05-26-at-15-47-22.jpg](https://i.postimg.cc/vHfgcMSy/Whats-App-Image-2021-05-26-at-15-47-22.jpg)](https://postimg.cc/Tp2Ys86N)
