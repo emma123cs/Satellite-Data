@@ -141,7 +141,7 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 
 (iii) In our dataset, we included the coordinates of 12215 different MMSI numbers. The user can enter one of these MMSI and get to _app.route("/hello")_, where they will find a menu with 6 options (five graphs and one map). By entering an MMSI number, the functions for the different graphs and the folium map are called and create either PNG or an HTML file in the case of the map. By clicking on one option, the associated app route renders an HTML that displays the earlier created PNG or map (v).
 
-(iv) However, if the MMSI is not in our database, the site will display the error Message “That number is not in our database”. The form is created with the use of WTForms in the forms.py file and allows only for Integers to be typed into the field. The user will be reminded of that restriction with another error message.
+(iv) However, if the MMSI is not in our database, the site will display the error message “That number is not in our database”. The form is created with the use of WTForms in the _forms.py_ file and allows only for integers to be typed into the field. The user will be reminded of that restriction with another error message.
 
 ---------
 [![Whats-App-Image-2021-05-26-at-15-47-22.jpg](https://i.postimg.cc/vHfgcMSy/Whats-App-Image-2021-05-26-at-15-47-22.jpg)](https://postimg.cc/Tp2Ys86N)
@@ -174,20 +174,20 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 
 (vi) The image URL displays the associated PNG from the images folder that has been created by calling the functions in the first app route to a specific MMSI.
 
-(vii) The user can now go back and forth within the app and type in any MMSI number they would like to see the data analysis. The HTML pages for the graphs stay in the templates folder and are newly rendered with a new name and URL. Furthermore, the PNGs are also newly created. However, the HTML of the map always establishes an additional HTML file with the MMSI number in the name. This leads to a smoother UI, as one had to restart the code to render a new map.
+(vii) The user can now go back and forth within the app and type in any MMSI number for which they would like to see the data analysis. The HTML pages for the graphs stay in the templates folder and are newly rendered with a new name and URL. Furthermore, the PNGs are also newly created. However, the HTML of the map always establishes an additional HTML file with the MMSI number in the name. This leads to a smoother UI, as one had to restart the code to render a new map.
 
     render_template('map' + str(MMSI) + '.html')
 
-(viii) If the user decides they want to learn about maritime data in general, they can click on "Polygon Coordinates" on the index.html. It will show him the coordinates of a few ports in the United States as examples. *HIER BILD*
+(viii) If the user decides that he wants to learn about maritime data in general, he can click on "Polygon Coordinates" on the _index.html_. It will show him the coordinates of a few ports in the United States as examples. *HIER BILD*
 
-(ix) The PortsCoordinates.png is created by running the portsCooridnates.py file. Because it doesn’t change by running the code and slowed down our side severely,  we excluded the file from the website code. However, we can reload it every time by deleting the '#' in front of the 'US-ports()' function in website.py and call it.
+(ix) The _PortsCoordinates.png_ is created by running the _portsCooridnates.py_ file. Because it doesn’t change by running the code and slowed down our side severely,  we excluded the file from the website code. However, we can reload it every time by deleting the '#' in front of the 'US-ports()' function in _website.py_ and call it.
 
 (x)	The user can then choose to display the Polygon Map (which is explained above).
 
 
 ### Important Error
 
-When the users tries loading the graphs for a specific MMSI they might come across an error because the website is not able to display local ressources. However, the PNGs should have been created in the Folder _Satellite-Data/src/static/images_ and the Map should still work.
+When the users tries to load the graphs for a specific MMSI, they might come across an error because the website is not able to display local ressources. However, the PNGs should have been created in the Folder _Satellite-Data/src/static/images_ and the Map should still work.
 
 
 
