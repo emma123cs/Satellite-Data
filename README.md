@@ -18,8 +18,8 @@ Terminal Commands:
     git clone https://github.com/emma123cs/Satellite-Data.git
     cd Satellite-Data
     python3 -m venv env
-    Source env/bin/activate
-    pip install -r /src/requirements.txt
+    source env/bin/activate
+    pip3 install -r /src/requirements.txt
 
 -store the cvs file inside the data folder-
 
