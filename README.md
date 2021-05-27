@@ -23,6 +23,7 @@ Terminal Commands:
 
 -store the AIS.cvs file inside the data folder-
 
+    cd srcl
     export FLASK_APP=website
     flask run
 
