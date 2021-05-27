@@ -118,23 +118,19 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 (v)	In a next step, we have marked the nine largest ports in a geojson file (stored in DATA, _ports_us.geojson_), drawing ploygons around the ports. By using geopandas, we can outline the coordinates of the polygons around the ports.
 
-(vi) We can now test how many ships from our AIS data frame fall within the port ploygons. For this, we first use a folium map again to display all polygons drawn around the nine ports on a world map.
+(vi) We can also visualize all polygons drawn around the nine ports on a world map, using folium again.
 
 ---------
 [![Whats-App-Image-2021-05-26-at-16-51-38.jpg](https://i.postimg.cc/sX7Wb00P/Whats-App-Image-2021-05-26-at-16-51-38.jpg)](https://postimg.cc/JD7tkK8t)
 ##### _One of the polygons around the Port of Newark_
 ---------
 
-(vii) Finally, we create a confusion matrix with the ships´ and ports´ data and match their coordinates to identify the ports with the most of our ships from the AIS data in it. This allows us to determine the ports in which most of our ships can be localized.
-
-
-
 
 #### (2)	The front-end code with HTML:
 
 We used Flask as a framework to create a simple website. The code of the Flask app can be found in the file _website.py_. 
 
-(i)	The index.html file is the first HTML page that the user sees and is rendered by the app route (“/”) that is called instantly by running the code.  We used the simple HTML layout from John Sobanski, which is linked in the sources down below. By starting the code also, the function _polymap()_ for the Polygon-Map is called. 
+(i)	The _index.html_ file is the first HTML page that the user sees and is rendered by the app route (“/”) that is called instantly by running the code.  We used the simple HTML layout from John Sobanski, which is linked in the sources down below. By starting the code, the function _polymap()_ for the Polygon-Map is called simultaneously. 
 
 (ii) The user has two options on what to do next. A) they can check out the data analysis for a specific MMSI number, or B) they can learn about maritime traffic in general. 
 
