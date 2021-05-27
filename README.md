@@ -115,18 +115,18 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 We used Flask as a framework to create a simple website. The code of the Flask app can be found in the file _website.py_. 
 
-(i)	The index.html file is the first HTML page that the user sees and is rendered by the app route (“/”) that is called instantly by running the code.  We used the simple HTML layout from John Sobanski which is linked in the sources down below. By starting the code also, the function for the Polygon-Map is called. 
+(i)	The index.html file is the first HTML page that the user sees and is rendered by the app route (“/”) that is called instantly by running the code.  We used the simple HTML layout from John Sobanski, which is linked in the sources down below. By starting the code also, the function _polymap()_ for the Polygon-Map is called. 
 
-(ii) The user has two options on what to do next. A) they can check out the data-analysis for a specific MMSI number or B) they can learn about maritime traffic in general. 
+(ii) The user has two options on what to do next. A) they can check out the data analysis for a specific MMSI number, or B) they can learn about maritime traffic in general. 
 
 ---------
 [![Whats-App-Image-2021-05-26-at-15-46-23-copy.jpg](https://i.postimg.cc/D0nbQMN0/Whats-App-Image-2021-05-26-at-15-46-23-copy.jpg)](https://postimg.cc/N9CMBpBv)
 ##### _Two options for the user to choose from_
 ---------
 
-(iii) In our dataset, we included the coordinates of 12215 different MMSI. The user can enter one of these MMSI and get to app.route("/hello"), where they will find a menu with 6 options (five graphs and one map). By entering an MMSI number the functions for the different graphs and the folium map are called and create either PNG or, in the case of the map, an HTML file. By clicking on one of the options the associated app route renders an HTML which displays the earlier created PNG or map (v).
+(iii) In our dataset, we included the coordinates of 12215 different MMSI. The user can enter one of these MMSI and get to _app.route("/hello")_, where they will find a menu with 6 options (five graphs and one map). By entering an MMSI number, the functions for the different graphs and the folium map are called and create either PNG or an HTML file in the case of the map. By clicking on one option, the associated app route renders an HTML that displays the earlier created PNG or map (v).
 
-(iv) However, if the MMSI is not in our database, the site will display the error Message “That number is not in our database”. The form is created with the use of WTForms in the forms.py file. 
+(iv) However, if the MMSI is not in our database, the site will display the error Message “That number is not in our database”. The form is created with the use of WTForms in the forms.py file and allows only for Integers to be typed into the field. The user will be reminded of that restriction with another error message.
 
 ---------
 [![Whats-App-Image-2021-05-26-at-15-47-22.jpg](https://i.postimg.cc/vHfgcMSy/Whats-App-Image-2021-05-26-at-15-47-22.jpg)](https://postimg.cc/Tp2Ys86N)
@@ -139,7 +139,7 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 ##### _The error message in case the user writes string instead of integers_
 ---------
 
-(v)	When clicking on one of the six options the HTML page is rendered and saved in the templates folder. The HTML pages for the graphs follow a simple layout:
+(v)	When clicking on one of the six options, the HTML page is rendered and saved in the templates folder. The HTML pages for the graphs follow a simple layout:
     
     <!DOCTYPE html>
     <html lang="en">
@@ -157,15 +157,15 @@ We used Flask as a framework to create a simple website. The code of the Flask a
     </html>
 
 
-(vi) The image URL displays the associated PNG from the images folder that have been created by calling the functions in the first app route to a specific MMSI. 
+(vi) The image URL displays the associated PNG from the images folder that has been created by calling the functions in the first app route to a specific MMSI.
 
-(vii) The user can now go back and forth within the app and type in any MMSI number they would like to see the data analysis to. The HTML pages for the graphs stay in the templates folder and are newly rendered with a new name and URL. Furthermore, the PNGs are also newly created. However, the HTML of the map always creates an additional HTML file with the MMSI number in the name. This leads to a smoother UI, as one had to restart the code to render a new map.
+(vii) The user can now go back and forth within the app and type in any MMSI number they would like to see the data analysis. The HTML pages for the graphs stay in the templates folder and are newly rendered with a new name and URL. Furthermore, the PNGs are also newly created. However, the HTML of the map always establishes an additional HTML file with the MMSI number in the name. This leads to a smoother UI, as one had to restart the code to render a new map.
 
     render_template('map' + str(MMSI) + '.html')
 
 (viii) If the user decides they want to learn about maritime data in general, they can click on "Polygon Coordinates" on the index.html. It will show him the coordinates of a few ports in the United States as examples. *HIER BILD*
 
-(ix) The PortsCoordinates.png is created by running the portsCooridnates.py file. Because it doesn’t change by running the code and slowed down our side severely,  we excluded the file from the website code. However, we can reload it every time by deleting the '#' infront of the 'US-ports()' function in website.py and call it.
+(ix) The PortsCoordinates.png is created by running the portsCooridnates.py file. Because it doesn’t change by running the code and slowed down our side severely,  we excluded the file from the website code. However, we can reload it every time by deleting the '#' in front of the 'US-ports()' function in website.py and call it.
 
 (x)	The user can then choose to display the Polygon Map (which is explained above).
 
