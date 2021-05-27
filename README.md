@@ -15,7 +15,7 @@ In order to run the code, one has to download the dataset and store it in the DA
 
 Terminal Commands:
     
-    git clone URL
+    git clone https://github.com/emma123cs/Satellite-Data.git
     cd Satellite-Data
     cd src
     python3 -m venv env
