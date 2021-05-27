@@ -17,7 +17,6 @@ Terminal Commands:
     
     git clone https://github.com/emma123cs/Satellite-Data.git
     cd Satellite-Data
-    cd src
     python3 -m venv env
     Source env/bin/activate
     pip install -r /src/requirements.txt
