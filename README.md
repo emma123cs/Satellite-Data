@@ -139,7 +139,7 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 ##### _Two options for the user to choose from_
 ---------
 
-(iii) In our dataset, we included the coordinates of 12215 different MMSI. The user can enter one of these MMSI and get to _app.route("/hello")_, where they will find a menu with 6 options (five graphs and one map). By entering an MMSI number, the functions for the different graphs and the folium map are called and create either PNG or an HTML file in the case of the map. By clicking on one option, the associated app route renders an HTML that displays the earlier created PNG or map (v).
+(iii) In our dataset, we included the coordinates of 12215 different MMSI numbers. The user can enter one of these MMSI and get to _app.route("/hello")_, where they will find a menu with 6 options (five graphs and one map). By entering an MMSI number, the functions for the different graphs and the folium map are called and create either PNG or an HTML file in the case of the map. By clicking on one option, the associated app route renders an HTML that displays the earlier created PNG or map (v).
 
 (iv) However, if the MMSI is not in our database, the site will display the error Message “That number is not in our database”. The form is created with the use of WTForms in the forms.py file and allows only for Integers to be typed into the field. The user will be reminded of that restriction with another error message.
 
