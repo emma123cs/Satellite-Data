@@ -22,9 +22,8 @@ Terminal Commands:
     cd src
     pip3 install -r requirements.txt
 
--Note: store the AIS.cvs file inside the data folder (_ AIS_2018_01_01.zip_)-
+-Note: store the AIS.cvs file inside the data folder (_ AIS_2018_01_01.cvs_)-
 
-    cd src
     export FLASK_APP=website
     flask run
 
