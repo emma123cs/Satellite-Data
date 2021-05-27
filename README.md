@@ -28,6 +28,8 @@ Terminal Commands:
     flask run
 
 
+### Imports in website.py
+
 The following imports are necessary:
 
     from flask import Flask, render_template, url_for, redirect
