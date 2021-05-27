@@ -19,10 +19,12 @@ Terminal Commands:
     cd Satellite-Data
     python3 -m venv env
     source env/bin/activate
-    pip3 install -r /requirements.txt
+    cd src
+    pip3 install -r requirements.txt
 
--store the cvs file inside the data folder-
+-store the AIS.cvs file inside the data folder-
 
+    cd srcl
     export FLASK_APP=website
     flask run
 
@@ -102,7 +104,7 @@ As previously mentioned, the code is structured into two parts: (1) the back-end
 
 **Note:** The back-end code is integrated in the file _website.py_ and _portsCooridnates.py_ and only explained here seperately to provide a more comprehensive description of the code. 
 
-(i)	We first created a data frame with the AIS Data for January 1st, 2018 (randomly selected day to serve as an example, any other day could also be used instead). To get a feeling for  the unique MMSIs in the AIS data, we also printed them using df1.MMSI.unique(). This helped us to group the data for one illustrative MMSI in the AIS data and show the route on a map. 
+(i)	We first created a data frame with the AIS Data for January 1st, 2018 (randomly selected day to serve as an example, any other day could also be used instead. One would just have to adjust the URL inside _website.py_). To get a feeling for  the unique MMSIs in the AIS data, we also printed them using df1.MMSI.unique(). This helped us to group the data for one illustrative MMSI in the AIS data and show the route on a map. 
 
 (ii) To make the route more visual, we can also illustrate it on a world map, using folium.
 
