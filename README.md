@@ -19,6 +19,7 @@ Terminal Commands:
     cd Satellite-Data
     python3 -m venv env
     source env/bin/activate
+    cd src
     pip3 install -r requirements.txt
 
 -store the AIS.cvs file inside the data folder-
