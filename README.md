@@ -22,7 +22,7 @@ Terminal Commands:
     cd src
     pip3 install -r requirements.txt
 
--store the AIS.cvs file inside the data folder-
+-store the AIS.cvs file inside the data folder (_ National Oceanic and Atmospheric Administration of the US_-
 
     cd src
     export FLASK_APP=website
