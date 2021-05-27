@@ -189,6 +189,10 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 (x)	The user can then choose to display the Polygon Map (which is explained above).
 
 
+### Important Error
+
+When the users tries loading the graphs for a specific MMSI they might come across an error because the website is not able to display local ressources. However, the PNGs should have been created in the Folder Satellite-Data/src/static/images and the Map should still work.
+
 
 
 ### Future Applications
