@@ -13,7 +13,7 @@ In order to run the code, one has to download the dataset and store it in the DA
 
 ### Running the code 
 
-Terminal Commands:
+Follow the Terminal Commands:
     
     git clone https://github.com/emma123cs/Satellite-Data.git
     cd Satellite-Data
