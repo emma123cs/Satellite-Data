@@ -178,7 +178,7 @@ We used Flask as a framework to create a simple website. The code of the Flask a
 
     render_template('map' + str(MMSI) + '.html')
 
-(viii) If the user decides that he wants to learn about maritime data in general, he can click on "Polygon Coordinates" on the _index.html_. It will show him the coordinates of a few ports in the United States as examples. *HIER BILD*
+(viii) If the user decides that he wants to learn about maritime data in general, he can click on "Polygon Coordinates" on the _index.html_. It will show him the coordinates of a few ports in the United States as examples. 
 
 (ix) The _PortsCoordinates.png_ is created by running the _portsCooridnates.py_ file. Because it doesn’t change by running the code and slowed down our side severely,  we excluded the file from the website code. However, we can reload it every time by deleting the '#' in front of the 'US-ports()' function in _website.py_ and call it.
 
