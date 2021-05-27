@@ -19,7 +19,7 @@ Terminal Commands:
     cd Satellite-Data
     python3 -m venv env
     source env/bin/activate
-    pip3 install -r /src/requirements.txt
+    pip3 install -r /requirements.txt
 
 -store the cvs file inside the data folder-
 
