@@ -14,17 +14,18 @@ In order to run the code, one has to download the dataset and store it in the DA
 ### Running the code 
 
 Terminal Commands:
-1. git clone URL
-2. cd Satellite-Data
-3. cd src
-4. python3 -m venv env
-5. Source env/bin/activate
-6. pip install -r /src/requirements.txt
+    
+    git clone URL
+    cd Satellite-Data
+    cd src
+    python3 -m venv env
+    Source env/bin/activate
+    pip install -r /src/requirements.txt
 
 -store the cvs file inside the data folder-
 
-6. export FLASK_APP=website
-7. flask run
+    export FLASK_APP=website
+    flask run
 
 
 The following imports are necessary:
