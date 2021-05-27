@@ -172,7 +172,7 @@ We used Flask as a framework to create a simple website. The code of the Flask a
     </html>
 
 
-(vi) The image URL displays the associated PNG from the images folder that has been created by calling the functions in the first app route to a specific MMSI.
+(vi) The image URL displays the associated PNG from the images folder that has been created by calling the functions in the first app route to a specific MMSI. Note: If the user sees an error after clicking on one of the graphs, please read the paragraph "important error" below.
 
 (vii) The user can now go back and forth within the app and type in any MMSI number for which they would like to see the data analysis. The HTML pages for the graphs stay in the templates folder and are newly rendered with a new name and URL. Furthermore, the PNGs are also newly created. However, the HTML of the map always establishes an additional HTML file with the MMSI number in the name. This leads to a smoother UI, as one had to restart the code to render a new map.
 
