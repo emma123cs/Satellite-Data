@@ -72,7 +72,8 @@ polymap()
 
 #then we create the fuctions that are linked to a specific MMSI number and call them later in the index app route
 #every function below uses the 'savefig' command to create a PNG file except for the folium map which renders an HTML file
-
+#the plotting of the routes and the different graphs follow the same logic:
+#we create and sort the dataframe, enable a plot figure (matplotlib) and define the axis. Then we plot and save the file.
 def shipRoute(MMSI):
                 plt.figure()
                 x = grouped.get_group(MMSI).sort_values("BaseDateTime").LAT
