@@ -192,19 +192,19 @@ def shipRoute1():
 
 @app.route("/scatteredLatitudeCoordinates")
 def scatteredLatitudeCoordinates():
-    return render_template('scatteredLatitudeCoordinates.html', name = 'Scattered Latitude Coordinates', url ="/static/images/sLatitudeC.png")
+    return render_template('scatteredLatitudeCoordinates.html', name = 'Scattered Latitude Coordinates', url ="static/images/sLatitudeC.png")
 
 @app.route("/scatteredLongitudeCoordinates")
 def scatteredLongitudeCoordinates():
-    return render_template('scatteredLongitudeCoordinates.html', name = 'Scattered Longitude Coordinates', url ="/static/images/scatteredLongitudeCoordinates.png")
+    return render_template('scatteredLongitudeCoordinates.html', name = 'Scattered Longitude Coordinates', url ="static/images/scatteredLongitudeCoordinates.png")
 
 @app.route("/splineLatitude")
 def splineLatitude():
-    return render_template('splineLatitude.html', name = 'Spline Latitude', url ='/static/images/splineLatitude.png')
+    return render_template('splineLatitude.html', name = 'Spline Latitude', url ='static/images/splineLatitude.png')
 
 @app.route("/splineLongitude")
 def splineLongitude():
-    return render_template('splineLongitude.html', name = 'Spline Longitude', url ='/static/images/splineLongitude.png')
+    return render_template('splineLongitude.html', name = 'Spline Longitude', url ='static/images/splineLongitude.png')
 
 #and the routes that display the general map and the specific map with the ship route
 @app.route("/map")
