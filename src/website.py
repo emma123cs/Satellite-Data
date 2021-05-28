@@ -58,6 +58,7 @@ def polymap():
     #instead of printing, we save the map as an HTML file
   map_of_ports.save("templates/Polymap.html")
 
+#outcomment the following in order to reload the polyports.PNG
 #def US_ports():
     #ports_coordinates = gpd.read_file("../data/ports_us.geojson")
     #dfi.export(ports_coordinates, "static/images/PortsCoordinates.png")
@@ -67,6 +68,8 @@ def polymap():
     
 polymap()
 
+
+#outcomment the following in order to reload the polyports.PNG
 #US_ports()
 
 
