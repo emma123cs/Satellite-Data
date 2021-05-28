@@ -85,7 +85,7 @@ def shipRoute(MMSI):
                 plt.xlabel("LAT")
                 plt.ylabel("LON")
                 plt.title("MMSI: " + str(MMSI))
-                plt.savefig("static/images/shipRoute.png")
+                plt.savefig("/static/images/shipRoute.png")
   
 def foliumMap(MMSI):
     actual_map = folium.Map(location=[grouped.get_group(MMSI).LAT.mean(),
@@ -109,7 +109,7 @@ def sLatitudeCoordinates(MMSI):
     x = pd.to_datetime(DATA_FRAME2.BaseDateTime)
     y = DATA_FRAME2.LAT
     plt.scatter(x,y,c="green")
-    plt.savefig("static/images/sLatitudeC.png")
+    plt.savefig("/static/images/sLatitudeC.png")
 
 def sLongitudeCoordinates(MMSI):
     grouped = DATA_FRAME.groupby("MMSI")
@@ -119,7 +119,7 @@ def sLongitudeCoordinates(MMSI):
     x = pd.to_datetime(DATA_FRAME2.BaseDateTime)
     y = DATA_FRAME2.LON
     plt.scatter(x,y,c="red")
-    plt.savefig("static/images/scatteredLongitudeCoordinates.png")
+    plt.savefig("/static/images/scatteredLongitudeCoordinates.png")
 
 def sLatitude(MMSI):
     fig = plt.Figure()
@@ -137,7 +137,7 @@ def sLatitude(MMSI):
     ax.plot(x.to_numpy(), y, 'o', label='data')
     ax.plot(xs, cs(xs), label="S")
     ax.legend(loc='lower left', ncol=2)
-    plt.savefig("static/images/splineLatitude.png")
+    plt.savefig("/static/images/splineLatitude.png")
 
 def sLongitude(MMSI):
     fig = plt.Figure()
@@ -155,7 +155,7 @@ def sLongitude(MMSI):
     ax.plot(x.to_numpy(), y, 'o', label='data')
     ax.plot(xs, cs(xs), label="S")
     ax.legend(loc='lower left', ncol=2)
-    plt.savefig("static/images/splineLongitude.png")
+    plt.savefig("/static/images/splineLongitude.png")
 
 
 #below we have all the different app routes that render HTML files that display the PNGs of the graphs 
@@ -192,23 +192,23 @@ def hello_world():
 
 @app.route("/shipRoute")
 def shipRoute1():
-    return render_template('shipRoute.html', name = 'Ship Route', url ="static/images/shipRoute.png")
+    return render_template('shipRoute.html', name = 'Ship Route', url ="/static/images/shipRoute.png")
 
 @app.route("/scatteredLatitudeCoordinates")
 def scatteredLatitudeCoordinates():
-    return render_template('scatteredLatitudeCoordinates.html', name = 'Scattered Latitude Coordinates', url ="static/images/sLatitudeC.png")
+    return render_template('scatteredLatitudeCoordinates.html', name = 'Scattered Latitude Coordinates', url ="/static/images/sLatitudeC.png")
 
 @app.route("/scatteredLongitudeCoordinates")
 def scatteredLongitudeCoordinates():
-    return render_template('scatteredLongitudeCoordinates.html', name = 'Scattered Longitude Coordinates', url ="static/images/scatteredLongitudeCoordinates.png")
+    return render_template('scatteredLongitudeCoordinates.html', name = 'Scattered Longitude Coordinates', url ="/static/images/scatteredLongitudeCoordinates.png")
 
 @app.route("/splineLatitude")
 def splineLatitude():
-    return render_template('splineLatitude.html', name = 'Spline Latitude', url ='static/images/splineLatitude.png')
+    return render_template('splineLatitude.html', name = 'Spline Latitude', url ='/static/images/splineLatitude.png')
 
 @app.route("/splineLongitude")
 def splineLongitude():
-    return render_template('splineLongitude.html', name = 'Spline Longitude', url ='static/images/splineLongitude.png')
+    return render_template('splineLongitude.html', name = 'Spline Longitude', url ='/static/images/splineLongitude.png')
 
 #and the routes that display the general map and the specific map with the ship route
 @app.route("/map")
